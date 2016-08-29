@@ -1,97 +1,133 @@
 /* Animations */
 
 @keyframes pulse {
-  0%   { transform: scale(1); }
-  50% { transform: scale(0.8); }
-  100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes spin {
-  0%   { transform: rotate(30deg); }
-  100% { transform: rotate(210deg); }
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(210deg);
+    }
 }
+
 @keyframes spin2 {
-  0%   { transform: rotate(150deg); }
-  100% { transform: rotate(330deg); }
+    0% {
+        transform: rotate(150deg);
+    }
+    100% {
+        transform: rotate(330deg);
+    }
 }
+
 
 /* End Animations */
 
+
 /* Resets, Clears & Defaults */
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
     box-sizing: border-box;
 }
 
-body, input, textarea{
-    padding: 0; margin: 0;
+body,
+input,
+textarea {
+    padding: 0;
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 30px;
-    color: #555;
+    color: #000;
     font-weight: 300;
 }
-input:focus, textarea:focus{
+
+input:focus,
+textarea:focus {
     outline: 0;
 }
 
-h1, h2, h3, p{
+h1,
+h2,
+h3,
+p {
     margin: 0 0 20px 0;
     position: relative;
     z-index: 6;
 }
 
-h1{
+h1 {
     font-size: 40px;
     line-height: 46px;
     font-weight: 600;
 }
-h2{
+
+h2 {
     font-size: 28px;
     line-height: 36px;
     font-weight: 300;
 }
-h3{
+
+h3 {
     font-size: 20px;
     font-weight: 600;
 }
 
-a{
+a {
     color: #999;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
 ::selection {
-  background: #eee; /* WebKit/Blink Browsers */
+    background: #eee;
+    /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
-  background: #eee; /* Gecko Browsers */
+    background: #eee;
+    /* Gecko Browsers */
 }
+
 
 /* End Resets, Clears & Defaults */
 
-.container{
+.container {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
 }
-.container:after{
+
+.container:after {
     content: "";
     display: block;
     clear: both;
 }
-section{
+
+section {
     padding: 100px 20px;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 15px 30px;
     border-radius: 50px;
@@ -101,30 +137,36 @@ section{
     background: transparent;
     cursor: pointer;
 }
-.btn:hover{
+
+.btn:hover {
     text-decoration: none;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
-.btn.yellow{
+
+.btn.yellow {
     color: #fbc93d;
     border: 1px solid #fbc93d;
 }
-.btn.smaller{
+
+.btn.smaller {
     padding: 10px 25px;
 }
-.btn .fa{
+
+.btn .fa {
     margin-left: 10px;
 }
 
-header{
+header {
     background: #222;
     padding: 0 20px;
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 200;
 }
-header .logo{
+
+header .logo {
     float: left;
     font-family: 'Open Sans', sans-serif;
     padding: 13px 0;
@@ -134,80 +176,100 @@ header .logo{
     line-height: 30px;
     margin: 0;
 }
-header .logo .fa{
+
+header .logo .fa {
     font-size: 16px;
     position: relative;
     top: -1px;
     margin-right: 7px;
 }
-header nav{
+
+header nav {
     float: right;
 }
-header nav ul{
+
+header nav ul {
     padding: 0;
     margin: 0;
 }
-header nav ul li{
+
+header nav ul li {
     display: inline-block;
     float: left;
 }
-header nav ul li a{
+
+header nav ul li a {
     display: inline-block;
     padding: 15px 20px;
     color: #fff;
     transition: 200ms;
 }
-header nav ul li a:hover, header nav ul li a.active{
+
+header nav ul li a:hover,
+header nav ul li a.active {
     text-decoration: none;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
-header .toggle-menu{
+
+header .toggle-menu {
     display: none;
 }
 
-.splash{
+.splash {
     background: #fbc93d;
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
-.splash:after{
+
+.splash:after {
     content: "";
     display: block;
     position: absolute;
-    top: -40px; right: -40px; bottom: -40px; left: -40px;
-    background: rgba(255,255,255,0.08);
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    left: -40px;
+    background: rgba(255, 255, 255, 0.08);
     transform: rotate(30deg);
     animation: spin 60s infinite linear;
 }
-.splash:before{
+
+.splash:before {
     content: "";
     display: block;
     position: absolute;
-    top: -40px; right: -40px; bottom: -40px; left: -40px;
-    background: rgba(255,255,255,0.08);
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    left: -40px;
+    background: rgba(255, 255, 255, 0.08);
     transform: rotate(150deg);
     animation: spin2 50s infinite linear;
 }
-.splash .container{
+
+.splash .container {
     position: relative;
     top: 48%;
     transform: translateY(-50%);
     z-index: 5;
 }
-.splash h2{
+
+.splash h2 {
     margin-bottom: 40px;
 }
 
-.overview{
+.overview {
     text-align: center;
 }
-.overview > div > div{
+
+.overview > div > div {
     float: left;
     width: 33%;
     padding: 0 40px 0 40px;
 }
-.overview .fa{
+
+.overview .fa {
     display: inline-block;
     font-size: 50px;
     width: 100px;
@@ -217,58 +279,71 @@ header .toggle-menu{
     margin-bottom: 20px;
     padding-top: 25px;
 }
-.overview p{
+
+.overview p {
     margin-bottom: 0;
 }
 
-.feature.greybg{
+.services.greybg {
     background: #f6f6f6;
 }
-.feature{
+
+.services {
     position: relative;
     overflow: hidden;
 }
-.feature img{
+
+.services img {
     position: absolute;
     top: 100px;
     right: 55%;
 }
-.feature:nth-of-type(even) img{
+
+.services:nth-of-type(even) img {
     right: auto;
     left: 55%;
 }
-.feature > div > div{
+
+.services > div > div {
     width: 50%;
     float: right;
 }
-.feature > div > div > p{
+
+.services > div > div > p {
     margin-bottom: 40px;
 }
-.feature:nth-of-type(even) > div > div{
+
+.services:nth-of-type(even) > div > div {
     float: left;
 }
-.feature ul{
+
+.services ul {
     margin: 0;
     padding: 0;
 }
-.feature ul li{
+
+.services ul li {
     display: block;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eee;
 }
-.feature ul li:last-child{
+
+.services ul li:last-child {
     margin-bottom: 0;
-    padding-bottom: 0;  
+    padding-bottom: 0;
     border-bottom: 0;
 }
-.feature ul li h3{
+
+.services ul li h3 {
     margin: 0 0 5px 0;
 }
-.feature ul li p:last-child{
+
+.services ul li p:last-child {
     margin: 0;
 }
-.feature ul li .fa{
+
+.services ul li .fa {
     float: left;
     font-size: 30px;
     background: #fbc93d;
@@ -282,107 +357,130 @@ header .toggle-menu{
     margin-right: 20px;
     margin-top: 7px;
 }
-.feature ul li p{
+
+.services ul li p {
     overflow: hidden;
 }
 
-.cta{
+.gallery {
     background: #fbc93d;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
-.cta:after{
+
+.gallery:after {
     content: "";
     display: block;
     position: absolute;
-    top: -40px; right: -40px; bottom: -40px; left: -40px;
-    background: rgba(255,255,255,0.1);
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    left: -40px;
+    background: rgba(255, 255, 255, 0.1);
     transform: rotate(30deg);
 }
-.cta .container{
+
+.gallery .container {
     position: relative;
     z-index: 10;
 }
-.cta h2{
+
+.gallery h2 {
     margin-bottom: 40px;
 }
 
-.contact{
+.contact {
     background: #fbc93d;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
-.contact:after{
+
+.contact:after {
     content: "";
     display: block;
     position: absolute;
-    top: -40px; right: -40px; bottom: -40px; left: -40px;
-    background: rgba(255,255,255,0.1);
+    top: -40px;
+    right: -40px;
+    bottom: -40px;
+    left: -40px;
+    background: rgba(255, 255, 255, 0.1);
     transform: rotate(30deg);
 }
-.contact .input{
+
+.contact .input {
     width: 47%;
     float: left;
 }
-.contact .input:nth-of-type(odd){
+
+.contact .input:nth-of-type(odd) {
     margin-right: 6%;
 }
-.contact .message{
+
+.contact .message {
     display: block;
     clear: both;
     float: none;
     padding-top: 10px;
 }
-.contact .input input{
+
+.contact .input input {
     display: block;
     width: 100%;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     border: 0;
     padding: 10px 15px;
 }
-.contact .message textarea{
+
+.contact .message textarea {
     display: block;
     width: 100%;
     height: 200px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     border: 0;
     padding: 10px 15px;
     resize: vertical;
 }
-.contact label{
+
+.contact label {
     position: relative;
     z-index: 10;
 }
-.contact label span{
+
+.contact label span {
     display: block;
     text-align: left;
     font-size: 14px;
 }
-.contact label span .fa{
+
+.contact label span .fa {
     margin-right: 7px;
 }
-.contact .submit{
+
+.contact .submit {
     display: block;
     text-align: center;
     padding-top: 40px;
 }
-.contact h2{
+
+.contact h2 {
     margin-bottom: 40px;
 }
 
-.pricing{
+.pricing {
     text-align: center;
 }
-.pricing > div > div{
+
+.pricing > div > div {
     float: left;
     width: 33%;
     margin-top: 60px;
     background: #f6f6f6;
     padding: 40px;
 }
-.pricing > div > div h3{
+
+.pricing > div > div h3 {
     background: #555;
     color: #fff;
     display: block;
@@ -390,142 +488,159 @@ header .toggle-menu{
     padding: 30px;
     position: relative;
 }
-.pricing > div > div h3 span{
+
+.pricing > div > div h3 span {
     display: block;
 }
-.pricing > div > div h3 span .fa{
+
+.pricing > div > div h3 span .fa {
     margin: 0 1px;
 }
-.pricing > div > div .price{
+
+.pricing > div > div .price {
     font-size: 40px;
 }
-.pricing > div > div:nth-of-type(2){
+
+.pricing > div > div:nth-of-type(2) {
     width: calc(34% + 20px);
     margin: 40px -10px 0 -10px;
-    box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 50;
 }
-.pricing > div > div:nth-of-type(2) h3{
+
+.pricing > div > div:nth-of-type(2) h3 {
     background: #fbc93d;
     color: #555;
     display: block;
 }
-.pricing ul{
+
+.pricing ul {
     padding: 0;
     margin: 27px 0;
 }
-.pricing ul li{
+
+.pricing ul li {
     display: block;
     line-height: 40px;
     border-bottom: 1px solid #eee;
 }
-.pricing ul li:last-child{
+
+.pricing ul li:last-child {
     border-bottom: 0;
 }
 
-footer{
+footer {
     background: #222;
     color: #ccc;
     padding: 0 20px;
 }
-footer .copyright{
+
+footer .copyright {
     float: left;
     padding: 15px 0;
 }
-footer .copyright p{
+
+footer .copyright p {
     margin: 0;
 }
-footer .copyright a{
+
+footer .copyright a {
     color: #fff;
 }
-footer .social{
+
+footer .social {
     float: right;
     padding: 15px 0;
 }
-footer .social a{
+
+footer .social a {
     margin-left: 10px;
     font-size: 20px;
     color: #ccc;
 }
-footer .social a:hover{
+
+footer .social a:hover {
     color: #fff;
 }
 
-@media (max-width: 800px){
-    section{
+@media (max-width: 800px) {
+    section {
         padding: 80px 10px;
     }
-    header, footer{
+    header,
+    footer {
         padding: 0 10px;
     }
-    .splash{
+    .splash {
         height: auto;
         padding: 150px 10px 80px 10px;
         text-align: center;
     }
-    .splash .container{
+    .splash .container {
         position: relative;
         top: 0;
         transform: none;
+        background-image: url("images/main_page.jpg");
+        background-position: 0px 0px;
     }
-    .overview > div > div{
+    .overview > div > div {
         padding: 0 20px;
     }
-    .feature img{
+    .services img {
         right: 65%;
     }
-    .feature:nth-of-type(even) img{
+    .services:nth-of-type(even) img {
         left: 65%;
     }
-    .feature > div > div{
+    .services > div > div {
         width: 60%;
     }
-    header nav ul li a{
+    header nav ul li a {
         padding: 15px;
     }
-    .pricing > div > div{
+    .pricing > div > div {
         width: 100% !important;
         float: none;
         margin: 0 0 20px 0 !important;
         box-shadow: none !important;
     }
-    .pricing > div > div h3{
+    .pricing > div > div h3 {
         background: #555 !important;
         color: #fff !important;
     }
-    .pricing h2{
+    .pricing h2 {
         margin-bottom: 40px;
     }
 }
 
-@media (max-width: 600px){
-    section{
+@media (max-width: 600px) {
+    section {
         padding: 40px 10px;
     }
-    .splash{
+    .splash {
         padding: 100px 10px 40px 10px;
     }
-    .overview > div > div{
+    .overview > div > div {
         float: none;
         width: 100%;
         margin-bottom: 40px;
         padding: 0;
     }
-    .overview > div > div:last-child{
+    .overview > div > div:last-child {
         margin-bottom: 0;
     }
-    .overview p{
+    .overview p {
         overflow: hidden;
     }
-    .feature img{
+    .services img {
         display: none;
     }
-    .feature > div > div{
+    .services > div > div {
         width: 100%;
         float: none;
     }
-    header nav{
+    header nav {
         float: none;
         position: fixed;
         top: 56px;
@@ -536,20 +651,20 @@ footer .social a:hover{
         background: #333;
         transition: 200ms;
     }
-    header nav.visible{
+    header nav.visible {
         left: 0px;
     }
-    header nav ul li{
+    header nav ul li {
         display: block;
         float: none;
         width: 100%;
     }
-    header nav ul li a{
+    header nav ul li a {
         display: block;
         width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    header .toggle-menu{
+    header .toggle-menu {
         display: block;
         color: #fff;
         position: absolute;
@@ -557,28 +672,28 @@ footer .social a:hover{
         top: 13px;
         font-size: 28px;
     }
-    footer{
+    footer {
         text-align: center;
     }
-    footer .copyright, footer .social{
+    footer .copyright,
+    footer .social {
         float: none;
     }
-    footer .social{
+    footer .social {
         padding-top: 0;
     }
-
-    .contact .input{
+    .contact .input {
         display: block;
         width: 100%;
         float: none;
     }
-    .contact .input:nth-of-type(odd){
+    .contact .input:nth-of-type(odd) {
         margin-right: 0;
     }
-    .contact label{
+    .contact label {
         padding-top: 10px;
     }
-    .contact label:first-of-type{
+    .contact label:first-of-type {
         padding-top: 0;
     }
 }
